@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - BookShop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="font-poppins bg-gray-100 transition-colors duration-300">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <div class="text-2xl font-bold text-gray-800">BookShop</div>
+        <ul class="hidden md:flex space-x-8 text-gray-600">
+          <li><a href="index.html" class="hover:text-orange-500">Home</a></li>
+          <li><a href="shop.html" class="hover:text-orange-500">Shop</a></li>
+          <li>
+            <a href="categories.html" class="hover:text-orange-500"
+              >Categories</a
+            >
+          </li>
+          <li><a href="about.html" class="hover:text-orange-500">About</a></li>
+          <li>
+            <a href="contact.html" class="text-orange-500 font-semibold"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <div class="flex items-center space-x-4">
+          <a href="#" class="text-gray-600 hover:text-orange-500"
+            ><svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+              />
+            </svg>
+          </a>
+          <!-- Dark Mode Toggle Button -->
+          <button
+            id="theme-toggle"
+            class="text-gray-600 hover:text-orange-500 focus:outline-none"
+            aria-label="Toggle dark mode"
+          >
+            <svg
+              id="sun-icon"
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+              />
+            </svg>
+            <svg
+              id="moon-icon"
+              class="w-6 h-6 hidden"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+              />
+            </svg>
+          </button>
+          <button
+            id="hamburger"
+            class="md:hidden text-gray-600 focus:outline-none"
+          >
+            <svg
+              id="menu-icon"
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+            <svg
+              id="close-icon"
+              class="w-6 h-6 hidden"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+      </nav>
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+        <ul class="flex flex-col space-y-4 px-6 py-4 text-gray-600">
+          <li><a href="index.html" class="hover:text-orange-500">Home</a></li>
+          <li><a href="shop.html" class="hover:text-orange-500">Shop</a></li>
+          <li>
+            <a href="categories.html" class="hover:text-orange-500"
+              >Categories</a
+            >
+          </li>
+          <li><a href="about.html" class="hover:text-orange-500">About</a></li>
+          <li>
+            <a href="contact.html" class="hover:text-orange-500">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+          Get in Touch
+        </h2>
+        <div class="flex flex-col md:flex-row gap-8">
+          <div class="md:w-1/2">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">
+              Send Us a Message
+            </h3>
+            <div class="space-y-4">
+              <input
+                type="text"
+                placeholder="Your Name"
+                class="w-full p-3 rounded-md bg-gray-100 border-none focus:ring-2 focus:ring-orange-500"
+              />
+              <input
+                type="email"
+                placeholder="Your Email"
+                class="w-full p-3 rounded-md bg-gray-100 border-none focus:ring-2 focus:ring-orange-500"
+              />
+              <textarea
+                placeholder="Your Message"
+                class="w-full p-3 rounded-md bg-gray-100 border-none focus:ring-2 focus:ring-orange-500 h-32"
+              ></textarea>
+              <button
+                class="bg-orange-500 text-white px-6 py-3 rounded-md hover:bg-orange-600"
+              >
+                Send Message
+              </button>
+            </div>
+          </div>
+          <div
+            class="md:w-1/2 rounded-md w-full rounded-md border border-gray-200 dark:border-gray-600 overflow-hidden"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.631404683705!2d104.89921187452721!3d11.578259843893385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951e96d257a6f%3A0x6b66703c5fc0c7cc!2sScience%20and%20Technology%20Advanced%20Development%20Co.%2C%20Ltd.!5e0!3m2!1sen!2skh!4v1750649348448!5m2!1sen!2skh"
+              class="w-full h-full"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">BookShop</h3>
+            <p class="text-gray-400">
+              Your one-stop shop for books of all genres. Discover, read, and
+              enjoy!
+            </p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="index.html" class="text-gray-400 hover:text-orange-500"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="shop.html" class="text-gray-400 hover:text-orange-500"
+                  >Shop</a
+                >
+              </li>
+              <li>
+                <a
+                  href="categories.html"
+                  class="text-gray-400 hover:text-orange-500"
+                  >Categories</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="text-gray-400 hover:text-orange-500"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-gray-400 hover:text-orange-500"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+            <p class="text-gray-400">Street 2004, Phnom Penh</p>
+            <p class="text-gray-400">Email: info@bookshop.com</p>
+            <p class="text-gray-400">Phone: (+855) 96-427-9700</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Newsletter</h3>
+            <p class="text-gray-400 mb-4">
+              Subscribe for updates on new releases!
+            </p>
+            <div class="flex">
+              <input
+                type="email"
+                placeholder="Your email"
+                class="p-2 rounded-l-md bg-gray-700 text-white border-none focus:ring-2 focus:ring-orange-500"
+              />
+              <button
+                class="bg-orange-500 p-2 rounded-r-md hover:bg-orange-600"
+              >
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 text-center text-gray-400">
+          <p>© 2025 BookShop. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript for Hamburger Menu and Dark Mode -->
+    <script src="script.js"></script>
+  </body>
+</html>

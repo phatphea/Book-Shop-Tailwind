@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop - Book Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="font-poppins bg-gray-100 transition-colors duration-300">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <div class="text-2xl font-bold text-gray-800">BookShop</div>
+        <ul class="hidden md:flex space-x-8 text-gray-600">
+          <li><a href="index.html" class="hover:text-orange-500">Home</a></li>
+          <li>
+            <a href="shop.html" class="text-orange-500 font-semibold">Shop</a>
+          </li>
+          <li>
+            <a href="categories.html" class="hover:text-orange-500"
+              >Categories</a
+            >
+          </li>
+          <li><a href="about.html" class="hover:text-orange-500">About</a></li>
+          <li>
+            <a href="contact.html" class="hover:text-orange-500">Contact</a>
+          </li>
+        </ul>
+        <div class="flex items-center space-x-4">
+          <a href="#" class="text-gray-600 hover:text-orange-500"
+            ><svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+              />
+            </svg>
+          </a>
+          <!-- Dark Mode Toggle Button -->
+          <button
+            id="theme-toggle"
+            class="text-gray-600 hover:text-orange-500 focus:outline-none"
+            aria-label="Toggle dark mode"
+          >
+            <svg
+              id="sun-icon"
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+              />
+            </svg>
+            <svg
+              id="moon-icon"
+              class="w-6 h-6 hidden"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+              />
+            </svg>
+          </button>
+          <button
+            id="hamburger"
+            class="md:hidden text-gray-600 focus:outline-none"
+          >
+            <svg
+              id="menu-icon"
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+            <svg
+              id="close-icon"
+              class="w-6 h-6 hidden"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+      </nav>
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+        <ul class="flex flex-col space-y-4 px-6 py-4 text-gray-600">
+          <li><a href="index.html" class="hover:text-orange-500">Home</a></li>
+          <li><a href="shop.html" class="hover:text-orange-500">Shop</a></li>
+          <li>
+            <a href="categories.html" class="hover:text-orange-500"
+              >Categories</a
+            >
+          </li>
+          <li><a href="about.html" class="hover:text-orange-500">About</a></li>
+          <li>
+            <a href="contact.html" class="hover:text-orange-500">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Shop Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+          Our Book Collection
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+          <!-- Book Card 1 -->
+          <div
+            class="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition"
+          >
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1328030470i/3022166.jpg"
+              alt="Book 1"
+              class="mx-auto w-auto h-64 object-cover hover:scale-105 transition-transform duration-300"
+            />
+
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-gray-800">
+                The Great Novel
+              </h3>
+              <p class="text-gray-600 text-sm mb-2">by John Author</p>
+              <p class="text-orange-500 font-bold">$19.99</p>
+              <a
+                href="#"
+                class="mt-4 inline-block text-orange-500 font-semibold hover:underline"
+                >Add to Cart</a
+              >
+            </div>
+          </div>
+          <!-- Book Card 2 -->
+          <div
+            class="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition"
+          >
+            <img
+              src="https://m.media-amazon.com/images/I/81AfAM5+qVS._UF1000,1000_QL80_.jpg"
+              alt="Book 2"
+              class="mx-auto w-auto h-64 object-cover hover:scale-105 transition-transform duration-300"
+            />
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-gray-800">Mystery Tales</h3>
+              <p class="text-gray-600 text-sm mb-2">by Jane Writer</p>
+              <p class="text-orange-500 font-bold">$15.99</p>
+              <a
+                href="#"
+                class="mt-4 inline-block text-orange-500 font-semibold hover:underline"
+                >Add to Cart</a
+              >
+            </div>
+          </div>
+          <!-- Book Card 3 -->
+          <div
+            class="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition"
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/thumb/9/94/The_Creator_2023_poster.jpg/250px-The_Creator_2023_poster.jpg"
+              alt="Book 3"
+              class="mx-auto w-auto h-64 object-cover hover:scale-105 transition-transform duration-300"
+            />
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-gray-800">Sci-Fi Saga</h3>
+              <p class="text-gray-600 text-sm mb-2">by Alex Creator</p>
+              <p class="text-orange-500 font-bold">$22.99</p>
+              <a
+                href="#"
+                class="mt-4 inline-block text-orange-500 font-semibold hover:underline"
+                >Add to Cart</a
+              >
+            </div>
+          </div>
+          <!-- Book Card 4 -->
+          <div
+            class="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition"
+          >
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1550547773i/23475519.jpg"
+              alt="Book 4"
+              class="mx-auto w-auto h-64 object-cover hover:scale-105 transition-transform duration-300"
+            />
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-gray-800">Love Stories</h3>
+              <p class="text-gray-600 text-sm mb-2">by Emma Poet</p>
+              <p class="text-orange-500 font-bold">$17.99</p>
+              <a
+                href="#"
+                class="mt-4 inline-block text-orange-500 font-semibold hover:underline"
+                >Add to Cart</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">BookShop</h3>
+            <p class="text-gray-400">
+              Your one-stop shop for books of all genres. Discover, read, and
+              enjoy!
+            </p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="index.html" class="text-gray-400 hover:text-orange-500"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="shop.html" class="text-gray-400 hover:text-orange-500"
+                  >Shop</a
+                >
+              </li>
+              <li>
+                <a
+                  href="categories.html"
+                  class="text-gray-400 hover:text-orange-500"
+                  >Categories</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="text-gray-400 hover:text-orange-500"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-gray-400 hover:text-orange-500"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+            <p class="text-gray-400">Street 2004, Phnom Penh</p>
+            <p class="text-gray-400">Email: info@bookshop.com</p>
+            <p class="text-gray-400">Phone: (+855) 96-427-9700</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Newsletter</h3>
+            <p class="text-gray-400 mb-4">
+              Subscribe for updates on new releases!
+            </p>
+            <div class="flex">
+              <input
+                type="email"
+                placeholder="Your email"
+                class="p-2 rounded-l-md bg-gray-700 text-white border-none focus:ring-0"
+              />
+              <button
+                class="bg-orange-500 p-2 rounded-r-md hover:bg-orange-600"
+              >
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 text-center text-gray-400">
+          <p>© 2025 BookShop. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript for Hamburger Menu and Dark Mode -->
+    <script src="script.js"></script>
+  </body>
+</html>
